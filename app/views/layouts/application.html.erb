@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <%= render 'layouts/rails_default' %>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type =>  'image/png' %>
+
+    <title>Usagle. The new age marketplace || Home</title>
+
+  </head>
+
+  <body class='<%= controller.controller_name %>'>
+
+    <% flash.each do |name, message| %>
+      <div class="alert <%= bootstrap_class_for(name) %>">
+        <button class="close" data-dismiss="alert">&times;</button>
+        <%= message %>
+      </div>
+    <% end %>
+
+    <%= render 'layouts/nav' %>
+
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render 'layouts/footer' %>
+
+    <%= render 'layouts/scripts' %>
+
+  </body>
+
+</html>
