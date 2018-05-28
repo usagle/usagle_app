@@ -14,9 +14,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to items_path
+      redirect_to items_path, success: 'Item successfully created'
     else
-      render :new
+      render :new, danger: 'Item not created'
     end
   end
 
@@ -24,15 +24,15 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to @item
+      redirect_to @item, success: 'Item successfully updated'
     else
-      render :edit
+      render :edit, danger: 'Item not updated'
     end
   end
 
   def destroy
     @item.destroy
-    redirect_to items_path
+    redirect_to items_path, success: 'Item successfully deleted'
   end
 
   private
