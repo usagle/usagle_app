@@ -15,9 +15,6 @@
           <a class="nav-link" href="<%= items_path %>">Catalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
 
@@ -31,6 +28,11 @@
             </li>
           <% end %>
           <%= link_to "Place an ad", new_item_path, class: 'btn btn-outline-light pull-xs-right' %>
+          <li class="nav-item account">
+            <% if user_signed_in? %>
+              <a class="nav-link">Account: <%= current_user.email %></a>
+            <% end %>
+          </li>
       </ul>
     </div>
   </div>

@@ -14,11 +14,14 @@
     </div>
     <div class="card-footer">
       <small>
-        <%= link_to 'Show', item %>
-        |
-        <%= link_to 'Edit', edit_item_path(item) %>
-        |
-        <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure ?'  } %>
+        Date:
+          <time><%= item.created_at.to_date.strftime("%d %B, %Y") %></time>
+        <% if user_signed_in? %>
+          |
+          <%= link_to 'Edit', edit_item_path(item) %>
+          |
+          <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure ?'  } %>
+        <% end %>
       </small>
     </div>
   </div>

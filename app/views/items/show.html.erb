@@ -7,8 +7,10 @@
       <h3 class="card-title"><%= @item.title %></h3>
       <h4>$ <%= @item.price %></h4>
       <p class="card-text"><%= @item.description.html_safe %></p>
-      <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-      4.0 stars</div>
+      <% if @item.user.present? %>
+          <p>Created: <%= @item.user.email %></p>
+      <% end %>
+    </div>
   </div>
   <div class="card card-outline-secondary my-4">
     <div class="card-header">

@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
   before_action :find_item, only: %i[show edit update destroy]
 
   def index
@@ -12,7 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = current_user.item.new(item_params)
     if @item.save
       redirect_to items_path, success: 'Item successfully created'
     else
@@ -42,6 +43,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :image_url, :price)
+    params.require(:item).permit(:title, :description, :image_url, :price, :current_user)
   end
 end
