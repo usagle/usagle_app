@@ -13,6 +13,7 @@ gem 'therubyracer'
 gem 'turbolinks',   '5.0.1'
 gem 'uglifier',     '3.2.0'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+gem 'paperclip', '~> 6.0'
 
 group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri

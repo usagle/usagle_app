@@ -3,7 +3,6 @@ class CreateItems < ActiveRecord::Migration[5.1]
     create_table :items do |t|
       t.string :title
       t.text :description
-      t.string :image_url
       t.decimal :price, precision: 8, scale: 2
 
       t.belongs_to :user, index: true

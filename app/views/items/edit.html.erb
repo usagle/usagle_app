@@ -2,7 +2,7 @@
 
 <div class="col-lg-9">
   <div class="card mt-4">
-  <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+  <%= image_tag @item.image.url(:large, class: 'card-img-top img-fluid') if @item.image? %>
 </div>
 
 <div class="card-outline-secondary my-4">
