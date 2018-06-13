@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type =>  'image/png' %>
 
-    <title>Usagle. The new age marketplace || Home</title>
+    <title><%= full_title(yield(:title)) %></title>
 
   </head>
 
