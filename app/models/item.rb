@@ -10,4 +10,7 @@ class Item < ApplicationRecord
     with: /\.(gif|jpg|png)\Z/i,
     message: 'The URL should point to a GIF, JPG or PNG image.'
   }
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 end

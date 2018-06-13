@@ -39,10 +39,10 @@ class ItemsController < ApplicationController
   private
 
   def find_item
-    @item = Item.find(params[:id])
+    @item = Item.friendly.find(params[:id])
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :image_url, :price, :current_user)
+    params.require(:item).permit(:title, :description, :image_url, :price, :current_user, :slug)
   end
 end
