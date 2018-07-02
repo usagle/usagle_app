@@ -17,7 +17,8 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to items_path, success: 'Item successfully created'
     else
-      render :new, danger: 'Item not created'
+      flash.now[:danger] = 'Item not created'
+      render :new
     end
   end
 
@@ -27,7 +28,8 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to @item, success: 'Item successfully updated'
     else
-      render :edit, danger: 'Item not updated'
+      flash.now[:danger] = 'Item not updated'
+      render :edit
     end
   end
 

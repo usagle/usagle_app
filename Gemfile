@@ -1,30 +1,44 @@
 source 'https://rubygems.org'
 
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
+  "https://github.com/#{repo_name}.git"
+end
+
 gem 'bcrypt', '3.1.11'
 gem 'bootstrap-sass', '3.3.7'
-gem 'coffee-rails', '4.2.2'
+gem 'coffee-rails', '~> 4.2'
 gem 'devise'
-gem 'jbuilder',     '2.7.0'
-gem 'jquery-rails', '4.3.1'
-gem 'puma', '3.9.1'
-gem 'rails', '5.1.4'
-gem 'sass-rails', '5.0.6'
-gem 'therubyracer'
-gem 'turbolinks',   '5.0.1'
-gem 'uglifier',     '3.2.0'
+gem 'font-awesome-rails'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
-gem 'paperclip', '~> 6.0'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
+gem 'letter_opener'
+gem 'mail_form', '~> 1.7', '>= 1.7.1'
+gem 'paperclip', '~> 6.0.0'
+gem 'puma', '~> 3.7'
+gem 'rails', '~> 5.1.2'
+gem 'sass-rails', '~> 5.0'
+gem 'sqlite3'
+gem 'therubyracer'
+gem 'toastr-rails'
+gem 'turbolinks', '~> 5'
+gem 'twitter-bootstrap-rails'
+gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
-  gem 'byebug',  '9.0.6', platform: :mri
-  gem 'sqlite3', '1.3.13'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
 end
 
 group :development do
-  gem 'listen',                '3.1.5'
-  gem 'spring',                '2.0.2'
-  gem 'spring-watcher-listen', '2.0.1'
-  gem 'web-console',           '3.5.1'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'pry-rails'
+  gem 'slim'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
@@ -35,7 +49,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

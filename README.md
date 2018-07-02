@@ -1,24 +1,27 @@
-# README
+# Проект
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Доска объявлений (премодерация)
+- Возможности:
 
-Things you may want to cover:
+    - Пользователь:
+        - Размещать объявления
 
-* Ruby version
+    - Администратор
+        - Проверять объявления
+        - Удалять объявления
 
-* System dependencies
+## Сущности
 
-* Configuration
+- Пользователи
+    - Администраторы
+    - Обычные
 
-* Database creation
+- Категории
+    - Название
+    - Отношение товара к категории
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Объявление (товары)
+    - Название
+    - Описание товара
+    - Стоимость
+    - Изображение
