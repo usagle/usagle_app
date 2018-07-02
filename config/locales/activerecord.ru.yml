@@ -1,0 +1,19 @@
+ru:
+  common:
+    errors: 'Ошибка'
+  activerecord:
+    models:
+      item: 'Объявление'
+    attributes:
+      item:
+        title: 'Название'
+        image: 'Изображение'
+        content: 'Содержание'
+        all_tags: 'Теги'
+      category:
+        name: 'Название'
+    errors:
+      messages:
+        blank: 'не может быть пустым'
+        too_short: ' слишком короткое'
+        too_long: 'слишком длинное'

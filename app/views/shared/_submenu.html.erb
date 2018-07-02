@@ -1,8 +1,8 @@
 <div class="col-lg-3">
   <h1 class="my-4">Categories</h1>
   <div class="list-group">
-    <a href="#" class="list-group-item active">Audio</a>
-    <a href="#" class="list-group-item">Video</a>
-    <a href="#" class="list-group-item">Photo</a>
+    <% @categories.each do |category| %>
+      <a href="#"><%= link_to category.name, category, class: "list-group-item" %></a>
+  <% end %>
   </div>
 </div>

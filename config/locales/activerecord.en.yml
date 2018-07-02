@@ -1,0 +1,18 @@
+ru:
+  common:
+    errors: 'Error'
+  activerecord:
+    models:
+      item: 'Items'
+    attributes:
+      item:
+        title: 'Title'
+        image: 'Image'
+        content: 'Content'
+      category:
+        name: 'Title'
+    errors:
+      messages:
+        blank: 'can"t be empty'
+        too_short: 'too short'
+        too_long: 'It"s too long'

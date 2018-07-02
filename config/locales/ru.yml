@@ -1,0 +1,22 @@
+ru:
+  common:
+    errors: 'При заполнении формы возникли ошибки'
+    create: 'Создать'
+    edit: 'Изменить'
+  items:
+    new:
+      title: 'Новое обьявление'
+    edit:
+      title: 'Редактирование объявления'
+    form:
+      submit: '%{action} объявлению'
+  categories:
+    index:
+      title: 'Категории'
+    new:
+      title: 'Новая категория'
+    edit:
+      title: 'Редактирование категории'
+    form:
+      submit:
+        '%{action} категорию'

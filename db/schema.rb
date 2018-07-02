@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_180_613_114_148) do
+ActiveRecord::Schema.define(version: 20_180_702_123_042) do
+  create_table 'categories', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
   create_table 'friendly_id_slugs', force: :cascade do |t|
     t.string 'slug', null: false
     t.integer 'sluggable_id', null: false
@@ -35,6 +41,8 @@ ActiveRecord::Schema.define(version: 20_180_613_114_148) do
     t.string 'image_content_type'
     t.integer 'image_file_size'
     t.datetime 'image_updated_at'
+    t.integer 'category_id'
+    t.index ['category_id'], name: 'index_items_on_category_id'
     t.index ['slug'], name: 'index_items_on_slug', unique: true
     t.index ['user_id'], name: 'index_items_on_user_id'
   end

@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :find_item, only: %i[show edit update destroy]
+  before_action :find_categories
 
   def index
     @items = Item.all.order('created_at DESC')
@@ -40,11 +41,15 @@ class ItemsController < ApplicationController
 
   private
 
+  def find_categories
+    @categories = Category.all
+  end
+
   def find_item
     @item = Item.friendly.find(params[:id])
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :price, :current_user, :slug, :image)
+    params.require(:item).permit(:title, :description, :price, :current_user, :slug, :image, :category_id)
   end
 end

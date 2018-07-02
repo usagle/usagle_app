@@ -1,0 +1,13 @@
+<%= render 'shared/submenu' %>
+<% provide(:title, "Categories") %>
+
+<div class="col-lg-9">
+  <%= render 'shared/slide' %>
+  <div class="row">
+    <% if @category.items.empty?  %>
+      <h2>No categories</h2>
+    <% else %>
+      <%= render @items %>
+    <% end %>
+  </div>
+</div>

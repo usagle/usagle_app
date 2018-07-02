@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user, optional: true
+  belongs_to :category
 
   validates :title, :description, presence: true
   # validates :title, uniqueness: true
