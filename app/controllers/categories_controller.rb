@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :find_category, only: %i[show edit update destroy]
-  before_action :find_categories
+  before_action :find_categories, only: %i[show edit update destroy]
 
   def index
     @categories = Category.all
@@ -22,7 +22,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.all
     @items = Item.where(category_id: [@category])
   end
 
