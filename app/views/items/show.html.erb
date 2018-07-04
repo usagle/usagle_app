@@ -8,7 +8,7 @@
       <h4>$ <%= @item.price %></h4>
       <p class="card-text"><%= @item.description.html_safe %></p>
       <% if @item.user.present? %>
-          <p>Created: <%= @item.user.email %></p>
+          <p>Added: <%= @item.user.email %></p>
       <% end %>
     </div>
   </div>
