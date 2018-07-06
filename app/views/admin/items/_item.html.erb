@@ -17,6 +17,8 @@
         <time><%= item.created_at.to_date.strftime("%d %B, %Y") %></time>
         <% if user_signed_in? %>
           |
+          <%= link_to 'Show', admin_item_path(item) %>
+          |
           <%= link_to 'Edit', edit_admin_item_path(item) %>
           |
           <%= link_to 'Destroy', [:admin, item], method: :delete, data: { confirm: 'Are you sure ?'  } %>
