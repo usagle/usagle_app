@@ -1,0 +1,9 @@
+<% provide(:title, "Catalog") %> 
+<%= render 'shared/submenu' %>
+
+<div class="col-lg-9">
+  <%= render 'shared/slide' %>
+    <div class="row">
+      <%= render @items %>
+    </div>
+</div>

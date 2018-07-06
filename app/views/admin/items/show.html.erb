@@ -7,6 +7,9 @@
       <h3 class="card-title"><%= @item.title %></h3>
       <h4>$ <%= @item.price %></h4>
       <p class="card-text"><%= @item.description.html_safe %></p>
+      <% if @item.user.present? %>
+          <p>Added: <%= @item.user.email %></p>
+      <% end %>
     </div>
   </div>
   <div class="card card-outline-secondary my-4">

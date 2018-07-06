@@ -5,7 +5,7 @@
     </a>
     <div class="card-body">
       <h4 class="card-title">
-        <%= link_to item.title, item_path(item) %>
+        <%= link_to item.title, admin_item_path(item) %>
       </h4>
       <h5>$ <%= item.price %></h5>
       <p class="card-text">
@@ -15,8 +15,15 @@
     <div class="card-footer">
       <small>
         <time><%= item.created_at.to_date.strftime("%d %B, %Y") %></time>
-        |
-        <%= link_to item.category.name, item.category %>
+        <% if user_signed_in? %>
+          |
+          <%= link_to 'Edit', edit_admin_item_path(item) %>
+          |
+          <%= link_to 'Destroy', [:admin, item], method: :delete, data: { confirm: 'Are you sure ?'  } %>
+        <% else %>
+          |
+          <%= link_to item.category.name, item.category %>
+        <% end %>
       </small>
     </div>
   </div>

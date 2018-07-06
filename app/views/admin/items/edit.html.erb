@@ -1,0 +1,14 @@
+<%= render 'shared/submenu' %>
+
+<div class="col-lg-9">
+  <div class="card mt-4">
+  <%= image_tag @item.image.url(:large, class: 'card-img-top img-fluid') if @item.image? %>
+</div>
+
+<div class="card-outline-secondary my-4">
+  <h3 class="text-center">Edit an ad</h3>
+  <div class="card-body">
+    <%= render 'form' %>
+  </div>
+</div>
+</div>
