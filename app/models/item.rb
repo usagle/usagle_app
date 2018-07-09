@@ -3,10 +3,9 @@ class Item < ApplicationRecord
   belongs_to :category
 
   validates :title, :description, presence: true
-  # validates :title, uniqueness: true
-  # validates :title, length: { maximum: 50 }
-  validates :description, length: { maximum: 1000 }
-  validates :price, numericality: { greater_than_or_equal_to: 0.01 }
+  validates :title, length: { maximum: 50 }
+  validates :description, length: { maximum: 3000 }
+  validates :price, numericality: { greater_than: 0 }
 
   extend FriendlyId
   friendly_id :title, use: :slugged
