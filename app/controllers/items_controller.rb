@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :find_categories
 
   def index
-    @items = Item.all.order('created_at DESC')
+    @items = Item.where(status: :approved).order('created_at DESC')
   end
 
   def show; end
@@ -23,9 +23,12 @@ class ItemsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @statuses = Item.statuses
+  end
 
   def update
+    @statuses = Item.statuses
     if @item.update(item_params)
       redirect_to @item, success: 'Item successfully updated'
     else
@@ -50,6 +53,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :price, :current_user, :slug, :image, :category_id)
+    params.require(:item).permit(:title, :description, :price, :current_user, :slug, :image, :category_id, :status)
   end
 end

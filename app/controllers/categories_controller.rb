@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @items = Item.where(category_id: [@category])
+    @items = Item.where(category_id: [@category], status: [:approved])
   end
 
   def edit; end

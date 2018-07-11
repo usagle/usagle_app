@@ -22,9 +22,12 @@ class Admin::ItemsController < Admin::BaseController
     end
   end
 
-  def edit; end
+  def edit
+    @statuses = Item.statuses
+  end
 
   def update
+    @statuses = Item.statuses
     if @item.update(item_params)
       redirect_to admin_items_path, success: 'Item successfully updated'
     else
@@ -49,6 +52,6 @@ class Admin::ItemsController < Admin::BaseController
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :price, :current_user, :slug, :image, :category_id)
+    params.require(:item).permit(:title, :description, :price, :current_user, :slug, :image, :category_id, :status)
   end
 end

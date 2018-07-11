@@ -28,6 +28,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :status %><br>
+    <%= f.select :status, options_for_select(@statuses.collect { |s| [s[0].humanize, s[0]]  }, selected: @item.status), {} , class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.submit "#{ @item.new_record? ? 'Create' : 'Edit' }", class: 'btn btn-primary' %>
   </div>
 

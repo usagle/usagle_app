@@ -5,6 +5,7 @@
     <%= image_tag @item.image.url(:large, class: 'card-img-top img-fluid') if @item.image? %>
     <div class="card-body">
       <h3 class="card-title"><%= @item.title %></h3>
+      <strong class="status"><%= @item.status.humanize %></strong>
       <h4>$ <%= @item.price %></h4>
       <p class="card-text"><%= @item.description.html_safe %></p>
       <% if @item.user.present? %>
