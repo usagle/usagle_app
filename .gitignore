@@ -8,8 +8,7 @@
 
 /tmp
 
-/config/database.yml
-/config/private_pub.yml
+config/database.yml
 /public/uploads/
 
 ump.rdb
