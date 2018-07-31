@@ -16,10 +16,10 @@ gem 'jquery-rails'
 gem 'letter_opener'
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
 gem 'paperclip', '~> 6.0.0'
+gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.2'
 gem 'sass-rails', '~> 5.0'
-gem 'sqlite3'
 gem 'therubyracer'
 gem 'toastr-rails'
 gem 'turbolinks', '~> 5'
@@ -46,11 +46,6 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
   gem 'minitest-reporters',       '1.1.14'
   gem 'rails-controller-testing', '1.0.2'
-end
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
