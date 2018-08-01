@@ -1,16 +1,38 @@
 /.bundle
 
 /db/*.sqlite3
-/db/*.sqlite3-journal
 
-/log/*
-!/log/.keep
-
+/log/*.log
 /tmp
 
-config/database.yml
-/public/uploads/
+.idea
 
-ump.rdb
+/doc/examples
+config/database.yml
+config/private_pub.yml
+
+/public/system
+/public/tmp
+/public/uploads
+/public/spec
+
+.DS_Store
+
+/coverage
+
+.powrc
+
+*.sublime-project
+*.sublime-workspace
+certs/
+
+.yardoc
+/log
+.powenv
+
+/config/application.yml
+.zeus.sock
+
+dump.rdb
 config/*.sphinx.conf
 db/sphinx
