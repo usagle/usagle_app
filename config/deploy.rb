@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:usagle/usagle_app.git'
 set :deploy_to, '/home/deployer/usagle'
 set :deploy_user, 'deployer'
 
-set :linked_files, %w[config/database.yml .env]
+append :linked_files, '.env.production', 'config/database.yml', 'config/secrets.yml'
 
 set :linked_dirs, %w[bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads]
 
