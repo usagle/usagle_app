@@ -94,6 +94,9 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dotenv (1.0.2)
+    dotenv-deployment (0.3.0)
+      dotenv (~> 1.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -314,6 +317,8 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  dotenv
+  dotenv-deployment
   font-awesome-rails
   friendly_id (~> 5.2, >= 5.2.4)
   guard (= 2.13.0)
