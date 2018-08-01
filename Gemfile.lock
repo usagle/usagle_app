@@ -95,8 +95,8 @@ GEM
       responders
       warden (~> 1.2.3)
     dotenv (1.0.2)
-    dotenv-deployment (0.3.0)
-      dotenv (~> 1.0)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -318,7 +318,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv
-  dotenv-deployment
+  dotenv-rails
   font-awesome-rails
   friendly_id (~> 5.2, >= 5.2.4)
   guard (= 2.13.0)

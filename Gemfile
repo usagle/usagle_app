@@ -9,6 +9,8 @@ gem 'bcrypt', '3.1.11'
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'dotenv'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'font-awesome-rails'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'jbuilder', '~> 2.5'
@@ -25,8 +27,6 @@ gem 'toastr-rails'
 gem 'turbolinks', '~> 5'
 gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'dotenv'
-gem 'dotenv-deployment', require: 'dotenv/deployment'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
