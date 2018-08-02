@@ -18,24 +18,20 @@ namespace :deploy do
     end
   end
 
-  desc 'Remote console'
-  task :console do
-    on roles(:app) do |h|
-      run_interactively "bundle exec rails console #{fetch(:rails_env)}", h.user
-    end
-  end
-
-  desc 'Remote dbconsole'
-  task :dbconsole do
-    on roles(:app) do |h|
-      run_interactively "bundle exec rails dbconsole #{fetch(:rails_env)}", h.user
-    end
-  end
-
-  def run_interactively(command, user)
-    info "Running `#{command}` as #{user}@#{host}"
-    exec %(ssh #{user}@#{host} -t "bash --login -c 'cd #{fetch(:deploy_to)}/current && #{command}'")
-  end
-
   after :publishing, :restart
+end
+
+namespace :rails do
+  desc 'Open a rails console `cap [staging] rails:console [server_index default: 0]`'
+  task :console do
+    server = roles(:app)[ARGV[2].to_i]
+
+    puts "Opening a console on: #{server.hostname}…."
+
+    cmd = "ssh #{server.user}@#{server.hostname} -t 'cd #{fetch(:deploy_to)}/current && RAILS_ENV=#{fetch(:rails_env)} bundle exec rails console'"
+
+    puts cmd
+
+    exec cmd
+  end
 end
