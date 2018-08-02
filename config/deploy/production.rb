@@ -11,4 +11,4 @@ set :ssh_options,
     keys: %w[/home/playrix/.ssh/id_rsa],
     forward_agent: true,
     auth_methods: %w[publickey password],
-    port: 3007
+    port: 22
