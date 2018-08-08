@@ -4,7 +4,10 @@ class Admin::ItemsController < Admin::BaseController
   before_action :find_statuses, only: %i[new create]
 
   def index
-    @items = Item.all.order('created_at DESC')
+    @items = Item
+    @items = @items.where(status: :approved)
+    order = params[:order] == 'asc' ? 'asc' : 'desc'
+    @items = @items.order("created_at #{order}")
   end
 
   def show; end

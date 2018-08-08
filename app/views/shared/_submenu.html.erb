@@ -5,4 +5,9 @@
       <a href="#"><%= link_to category.name, category, class: "list-group-item" %></a>
   <% end %>
   </div>
+  <h1 class="my-4">Sorting by</h1>
+  <p>
+	<%= link_to "New on top", items_path(order: "desc") %> |
+	<%= link_to "Old on top", items_path(order: "asc") %>
+  </p>
 </div>

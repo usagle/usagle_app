@@ -4,7 +4,10 @@ class ItemsController < ApplicationController
   before_action :find_categories
 
   def index
-    @items = Item.where(status: :approved).order('created_at DESC')
+    @items = Item
+    @items = @items.where(status: :approved)
+    order = params[:order] == 'asc' ? 'asc' : 'desc'
+    @items = @items.order("created_at #{order}")
   end
 
   def show; end
