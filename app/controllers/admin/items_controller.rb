@@ -1,6 +1,7 @@
 class Admin::ItemsController < Admin::BaseController
   before_action :find_item, only: %i[show edit update destroy]
   before_action :find_categories
+  before_action :find_statuses, only: %i[new create]
 
   def index
     @items = Item.all.order('created_at DESC')
@@ -49,6 +50,10 @@ class Admin::ItemsController < Admin::BaseController
 
   def find_item
     @item = Item.friendly.find(params[:id])
+  end
+
+  def find_statuses
+    @statuses = Item.all.statuses
   end
 
   def item_params
