@@ -7,7 +7,9 @@
   </div>
   <h1 class="my-4">Sorting by</h1>
   <p>
-	<%= link_to "New on top", items_path(order: "desc") %> |
-	<%= link_to "Old on top", items_path(order: "asc") %>
+    <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+      <%= link_to "New on top", items_path(order: "desc") %>
+    <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+      <%= link_to "Old on top", items_path(order: "asc") %>
   </p>
 </div>
