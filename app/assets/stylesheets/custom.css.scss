@@ -1,0 +1,23 @@
+/* universal */
+
+body { padding-top: 54px; }
+@media (min-width: 992px) { body { padding-top: 56px; } }
+
+/* table */
+
+.table { margin-top: 96px; }
+
+/* registration */
+
+.account { padding-left: 20px; }
+.sign_in { margin-top: 100px; margin-bottom: 250px; }
+
+/* flash */
+
+.field_with_errors label { color: #d01612 }
+.field_with_errors input { border-color: #d01612; }
+.field_with_errors textarea { border-color: #d01612; }
+
+/* item */
+
+.status { color: #3CB371; }
