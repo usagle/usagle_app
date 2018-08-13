@@ -11,13 +11,10 @@ gem 'rails', '~> 5.1.2'
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails'
-gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'materialize-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'simple_form'
 gem 'slim'
 gem 'therubyracer'
 gem 'toastr-rails'
@@ -25,12 +22,10 @@ gem 'turbolinks', '~> 5'
 gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'cancancan'
 gem 'devise'
 
 # other gems
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
-gem 'mail_form', '~> 1.7', '>= 1.7.1'
 gem 'paperclip', '~> 6.0.0'
 gem 'puma', '~> 3.7'
 
