@@ -42,6 +42,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -55,7 +56,6 @@ group :development, :test do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'selenium-webdriver'
   gem 'sqlite3'
-  gem 'web-console', '>= 3.3.0'
 end
 
 group :development do
@@ -65,6 +65,7 @@ group :development do
   gem 'capistrano-rails-console', require: false
   gem 'capistrano-rvm', require: false
   gem 'capistrano-sidekiq', require: false
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
