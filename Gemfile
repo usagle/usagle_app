@@ -37,14 +37,23 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'sidekiq'
 
 group :development, :test do
+  # test
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # debag
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
+
   gem 'capybara', '~> 2.13'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'pry-rails'
   gem 'selenium-webdriver'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
   gem 'web-console', '>= 3.3.0'
 end
