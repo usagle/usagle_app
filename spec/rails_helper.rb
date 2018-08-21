@@ -13,12 +13,12 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+  config.include Devise::Test::ControllerHelpers, type: :controller
+
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
   config.use_transactional_fixtures = true
-
   config.infer_spec_type_from_file_location!
-
   config.filter_rails_from_backtrace!
 
   Shoulda::Matchers.configure do |config|

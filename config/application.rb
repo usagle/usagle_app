@@ -18,6 +18,7 @@ module UsagleApp
                        routing_specs:   false,
                        request_specs:   false,
                        controller_spec: true
+
       g.factory_bot dir: 'spec/factories'
     end
   end
