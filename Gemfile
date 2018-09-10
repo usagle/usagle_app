@@ -13,6 +13,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'launchy'
 gem 'rubocop', '~> 0.58.2'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -39,10 +40,9 @@ gem 'sidekiq'
 
 group :development, :test do
   # test
-  gem 'database_cleaner'
+  gem 'capybara', '~> 3.6'
   gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.8'
   gem 'shoulda-matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
@@ -52,7 +52,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
 
-  gem 'capybara', '~> 2.13'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'selenium-webdriver'
