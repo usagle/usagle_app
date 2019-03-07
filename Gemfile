@@ -66,6 +66,7 @@ group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano-sidekiq', require: false
   gem 'web-console', '>= 3.3.0'
+  gem 'rails-erd'
 end
 
 group :test do
